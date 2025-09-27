@@ -1,0 +1,20 @@
+[Unit]
+Description=Telegram Bot Simple - @L_keys_bot
+After=network.target postgresql.service
+Wants=postgresql.service
+
+[Service]
+Type=simple
+User=botuser
+WorkingDirectory=/opt/telegram-bot-simple
+Environment=PATH=/opt/telegram-bot-simple/venv/bin:/usr/local/bin:/usr/bin:/bin
+EnvironmentFile=/opt/telegram-bot-simple/.env
+ExecStart=/opt/telegram-bot-simple/venv/bin/python /opt/telegram-bot-simple/k.py
+Restart=always
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=telegram-bot-simple
+
+[Install]
+WantedBy=multi-user.target
