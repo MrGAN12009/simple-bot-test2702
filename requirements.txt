@@ -1,6 +1,6 @@
 # requirements.txt для простого бота (без easyocr)
 aiogram==2.25.1
-aiohttp==3.8.6
+aiohttp
 asyncpg==0.29.0
 openai==0.28.0
 faiss-cpu==1.8.0
