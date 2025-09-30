@@ -62,7 +62,7 @@ import faiss
 # Конфигурация
 ADMIN_IDS_STR = os.getenv("ADMIN_IDS", "797671728,5452886292,489773218")
 ADMIN_IDS = [int(id.strip()) for id in ADMIN_IDS_STR.split(",") if id.strip()]
-TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TELEGRAM_BOT_TOKEN = os.getenv("BOT_TOKEN")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 KNOWLEDGE_BASE_PATH = os.getenv("KNOWLEDGE_BASE_PATH", "knowledge_base.txt")
 DOCS_DIR = "knowledge_base"
